@@ -31,7 +31,7 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 install:
   - "java -version"
- - make travissetup
+  - make travissetup
 script:
  - make check
 env:
