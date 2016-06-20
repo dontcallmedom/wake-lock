@@ -15,6 +15,7 @@ addons:
       - george-edison55-precise-backports
       - ubuntu-toolchain-r-test
     packages:
+      - oracle-java8-installer
       - libwww-perl
       - libcss-dom-perl
       - python-lxml
