@@ -30,13 +30,13 @@ before_install:
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16 -extension RANDR"
   - sh -e /etc/init.d/xvfb start
 install:
-  - jdk_switcher use oraclejdk8
   - "java -version"
   - make travissetup
 script:
  - make check
 env:
   global:
+    - JAVA_HOME=/usr/lib/jvm/java-8-oracle
     - URL="http://w3c.github.io/wake-lock/W3CTRMANIFEST"
     - DECISION="http://www.w3.org/2009/dap/track/actions/738"
     - secure: "TwvUyb5luZr5jm3Q+xQS86i4M/dsFLpGISfocHCXXo9GsNPzNfsg+xphep0G83SM9DAO34f6S3Own5QKP4VRYSPGBi16y8bm0YS6VjOEXHtRQgb4UPUZsa0KXABrbxbJcTBO4gByD4Wu5qLR74Htis4N5N6y8z1Mx1QPSDrpXbA="
